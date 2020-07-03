@@ -57,7 +57,7 @@ public class ControladorVistaPrincipal {
         this.panelTextArea= new PanelTextArea();
 
          //Agregamos a vista principal su propio panelBase
-         vistaPrincipal.setContentPane(vistaPrincipal.panelBase);
+         vistaPrincipal.getContentPane().add(vistaPrincipal.panelBase);
          
         //Confiduramos el layout del panelPrincipal a Border, y agregamos los paneles
          vistaPrincipal.panelBase.setLayout(new BorderLayout());
@@ -114,23 +114,24 @@ public class ControladorVistaPrincipal {
         panelTextArea.textArea.addMouseListener(new OyenteRatonPopupMenu());
 
         //Añadiendo y cargando ComboBox de TAMAÑO LETRA
-        panelPrincipal.comboBox.addItem(tamanio_fuente); //Agregaremos este primer elemento con el valor inicial que tendrá
         for (int i = 0; i < 100; i++) {
             panelPrincipal.comboBox.addItem(i);
 
         }
+         panelPrincipal.comboBox.setSelectedItem(tamanio_fuente); //Agregaremos este primer elemento con el valor inicial que tendrá
+       
         // Accion a realizar cuando el JComboBox cambia de item seleccionado.
         panelPrincipal.comboBox.addActionListener(new OyenteComboTamanio());
 
         ///AÑADIENDO COMBOBOX PARA ESTILO DE LETRA
         
         //Mostrar un listado con las fuentes DISPONIBLES
-        panelPrincipal.comboBoxStyle.addItem("Liberation Mono"); //Agregaremos este primer elemento con el valor inicial que tendrá
         //Recorremos el array de FontNames para rellenar el comboBox con todos los estilos de letra disponibles 
         for (String fontName : fontNames) {
             panelPrincipal.comboBoxStyle.addItem(fontName);
         }
-   
+    panelPrincipal.comboBoxStyle.setSelectedItem("Liberation Mono"); //Agregaremos este primer elemento con el valor inicial que tendrá
+       
         panelPrincipal.comboBoxStyle.addActionListener(new OyenteComboStyle());
     
         
