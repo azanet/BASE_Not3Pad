@@ -6,7 +6,7 @@
 package Controlador;
 
 import Modelo.MetodosPrincipal;
-import Vistas.PanelPrincipal;
+import Vistas.PanelMenuBar;
 import Vistas.PanelTextArea;
 
 
@@ -39,7 +39,7 @@ public class ControladorVistaPrincipal {
     
     public final VistaPrincipal vistaPrincipal;
     private final MetodosPrincipal metodosPrincipal;
-    public final PanelPrincipal panelPrincipal;
+    public final PanelMenuBar panelPrincipal;
     public final PanelTextArea panelTextArea;
 
           
@@ -53,7 +53,7 @@ public class ControladorVistaPrincipal {
     public ControladorVistaPrincipal(VistaPrincipal vistaPrincipal, MetodosPrincipal metodosPrincipal) {
         this.vistaPrincipal = vistaPrincipal;
         this.metodosPrincipal = metodosPrincipal;
-        this.panelPrincipal= new PanelPrincipal();
+        this.panelPrincipal= new PanelMenuBar();
         this.panelTextArea= new PanelTextArea();
 
          //Agregamos a vista principal su propio panelBase

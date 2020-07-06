@@ -23,7 +23,7 @@ import javax.swing.JPanel;
  * correspondientes a la "ventana principal"
  * 
  */
-public class PanelPrincipal extends JPanel {
+public class PanelMenuBar extends JPanel {
     
     
     
@@ -41,7 +41,7 @@ public class PanelPrincipal extends JPanel {
     
     
 
-    public PanelPrincipal() {
+    public PanelMenuBar() {
   //  super(new GridLayout(1, 1)); 
            
 

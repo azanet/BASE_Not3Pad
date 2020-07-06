@@ -6,7 +6,10 @@
 package Vistas;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -22,11 +25,29 @@ public class VistaPrincipal extends JFrame {
     public VistaPrincipal() {
 
        // super("Not3Pad");
-       //Seteamos TITULO a la ventana principal 
+      
+        Iniciar();
+
+    }
+    
+    private void Iniciar(){
+     //Seteamos TITULO a la ventana principal 
        setTitle("Not3Pad");
         panelBase = new JPanel();
-
-
+        
+        
+        //DESCOMENTANDO ESTAS LINEAS, PODEMOS ESTABLECER UN ESTILO VISUAL DISTINTO PARA NUESTRA APLICACIÓN UTILIZANDO LA LIBRERIA "JTATTOO"
+        //EL ESTILO VISUAL HAY QUE SETEARSE ANTES DE MOSTRAR LA VENTANA, O DARÁ ERROR        
+   /*     try{
+            //Ponemos primero el nombre del paquete, y seguido de este, la clase LookandFeel del estilo que queremos
+        UIManager.setLookAndFeel("com.jtattoo.plaf.noire.NoireLookAndFeel");
+        
+        }catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e){
+            JOptionPane.showMessageDialog(null, "Error al intentar establecer el estilo de vista\nSe establecerá el estilo visual por defecto");
+        }
+    */    
+        
+        
     }
 
 }//Fin de la vista principal
